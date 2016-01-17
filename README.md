@@ -13,15 +13,15 @@ little bit more secure by using SSL, and Basic authentication.
 You will need an SSL self signed certificate before you start.  There are a
 bunch of posts on the web on how to do this already.  Just looks around.  :-)
 
-1. Get this script `PythonistFileServer.py` onto your *Pythonista*
+1. Get this script `PythonistaFileServer.py` onto your *Pythonista*
    installation.
-2. Run `PythonistFileServer.py`.  This first attempt will fail.  Running
-   `PythonistFileServer.py` will make the module available in the console,
+2. Run `PythonistaFileServer.py`.  This first attempt will fail.  Running
+   `PythonistaFileServer.py` will make the module available in the console,
    which is needed for the next step.
 3. Go to the *Pythonista* console and:
    ```
-   >>> import PythonistFileServer
-   >>> PythonistFileServer.init_config()
+   >>> import PythonistaFileServer
+   >>> PythonistaFileServer.init_config()
    ```
    That will create the `~/Documents/.httpfileserver` directory, and initialize
    the `config.cfg` file in there.
@@ -30,7 +30,7 @@ bunch of posts on the web on how to do this already.  Just looks around.  :-)
    `username`, and `password`**.
 5. Upload your `server.key`, and `server.crt` files into the
    `~/Documents/.httpfileserver` directory.
-6. Start up PythonistFileServer.  You should be good to go.
+6. Start up PythonistaFileServer.  You should be good to go.
 
 
 ## Howtos
@@ -39,12 +39,12 @@ bunch of posts on the web on how to do this already.  Just looks around.  :-)
 
 #### Modify your configuration
 
-1. From within *Pythonista*, run `PythonistFileServer`, then quit.  This will
-   make `PythonistFileServer` available for import.
+1. From within *Pythonista*, run `PythonistaFileServer`, then quit.  This will
+   make `PythonistaFileServer` available for import.
 2. Swipe left to get the console, and
    ```
-   >>> import PythonistFileServer
-   >>> PythonistFileServer.edit_config()
+   >>> import PythonistaFileServer
+   >>> PythonistaFileServer.edit_config()
    ```
 3. Swipe right to bring up the editor then make your changes.
 
@@ -62,7 +62,7 @@ $ curl --insecure --user "test:tester" "https://testserver.local:8843/"
 {
     "cwd": "/",
     "files": [
-        "PythonistFileServer.py",
+        "PythonistaFileServer.py",
         "Welcome.txt",
         "test1/Welcome.txt"
     ],
@@ -98,7 +98,7 @@ $ curl --insecure --user "test:tester" -F "file=@somescript.py" \
 {
     "cwd": "/",
     "files": [
-        "PythonistFileServer.py",
+        "PythonistaFileServer.py",
         "somescript.py",
         "Welcome.txt",
         "test1/Welcome.txt"
