@@ -8,7 +8,11 @@
 # actions menu of the editor for quick access.
 #
 # Get Pythonista for iOS here:
-# http://omz-software.com/pythonista
+#    http://omz-software.com/pythonista
+#
+# For the latest version of this script:
+#   - https://github.com/digitalrounin/pythonista-fileserver
+#   - https://gist.github.com/digitalrounin/c533d19ce0ada4738ecf
 #
 # -----------------------------------------------------------------------------
 # By downloading or using the programs, you acknowledge acceptance of the
